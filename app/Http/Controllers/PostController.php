@@ -13,10 +13,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
         //
-        return "its working " . $id;
+        return "its working ";
     }
 
     /**
@@ -27,6 +27,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return "Im create";
     }
 
     /**
@@ -49,7 +50,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
-        return "this is show";
+        return "this is show " . $id;
     }
 
     /**
@@ -84,5 +85,13 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function show_post(){
+        return view('post')->with('name', 'Lel');
     }
 }
