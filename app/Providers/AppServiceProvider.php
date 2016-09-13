@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,8 +14,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        //view()->share('key', 'value');
+//        Blade::directive('datetime', function($exp){
+//            return "";
+//        });
+//
+//
+//        view()->share('key', 'value');
     }
 
     /**

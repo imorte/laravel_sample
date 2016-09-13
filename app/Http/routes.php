@@ -20,7 +20,7 @@ Route::get('/', ['as' => 'root', function () {
 
 Route::get('contact', 'PostController@contact');
 
-Route::get('post/{id}/', 'PostController@show_post');
+Route::get('post/{id}/{name}/', 'PostController@show_post');
 
 
 //
