@@ -1,5 +1,7 @@
 <?php
 use Illuminate\Support\Facades\DB;
+use App\Post;
+use DebugBar\DebugBar;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,9 +13,10 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-//Route::get('insert', function(){
-//    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel', 'laravel content']);
-//});
+Route::get('insert', function(){
+    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel 1', 'laravel content 1']);
+    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel 2 ', 'laravel content 2']);
+});
 //
 //Route::get('read', function(){
 //   $results = DB::select('select * from posts where id = ?', [103]);
@@ -38,6 +41,43 @@ use Illuminate\Support\Facades\DB;
 Route::get('/', ['as' => 'root', function () {
     return view('welcome');
 }]);
+
+
+/*
+|--------------------------------------------------------------------------
+| ELOQUENT
+|--------------------------------------------------------------------------
+*/
+
+//Route::get('read', function(){
+//    $posts = Post::all();
+//echo "<pre>";
+//
+//foreach ($posts as $post) {
+//    return $post->content . "<br>";
+//}
+//});
+//
+//Route::get('find/{id}', function($id){
+//    $post = Post::find($id);
+//
+//    return $post->title;
+//});
+
+//Route::get('soft', function(){
+//    //Post::find(6)->delete();
+//    return Post::find(6);
+//});
+//
+//Route::get('readsoft', function(){
+//
+//
+//    return Post::withTrashed()->find(6);
+//});
+
+Route::get('restore', function(){
+
+});
 
 //Route::get('/post/{id}', 'PostController@index');
 
