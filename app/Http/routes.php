@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +11,30 @@
 |
 */
 
+//Route::get('insert', function(){
+//    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel', 'laravel content']);
+//});
+//
+//Route::get('read', function(){
+//   $results = DB::select('select * from posts where id = ?', [103]);
+//
+//    foreach ($results as $result) {
+//        return $result->title;
+//    }
+//
+//});
+//
+//Route::get('update', function(){
+//    $updated = DB::update('update posts set title = "Update title" where id = ?', [103]);
+//    dd($updated);
+//});
+//
+//Route::get('delete', function(){
+//    $deleted = DB::delete('delete from posts where id = ?', ['103']);
+//
+//    dd($deleted);
+//});
+
 Route::get('/', ['as' => 'root', function () {
     return view('welcome');
 }]);
@@ -18,9 +42,9 @@ Route::get('/', ['as' => 'root', function () {
 //Route::get('/post/{id}', 'PostController@index');
 
 
-Route::get('contact', 'PostController@contact');
-
-Route::get('post/{id}/{name}/', 'PostController@show_post');
+//Route::get('contact', 'PostController@contact');
+//
+//Route::get('post/{id}/{name}/', 'PostController@show_post');
 
 
 //

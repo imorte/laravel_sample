@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
@@ -20,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
 //
 //
 //        view()->share('key', 'value');
+//        DB::listen(function($query){
+//
+//        });
+
+
     }
 
     /**
