@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Post;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -24,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
 //        DB::listen(function($query){
 //
 //        });
-
     }
 
     /**

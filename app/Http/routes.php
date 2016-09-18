@@ -14,8 +14,7 @@ use DebugBar\DebugBar;
 */
 
 Route::get('insert', function(){
-    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel 1', 'laravel content 1']);
-    DB::insert('insert into posts(title, content) values(?,?)' ,['php with laravel 2 ', 'laravel content 2']);
+    DB::insert('insert into posts (title, content) values(?,?)' ,['php with laravel 1', 'laravel content 1']);
 });
 //
 //Route::get('read', function(){
@@ -76,7 +75,10 @@ Route::get('/', ['as' => 'root', function () {
 //});
 
 Route::get('restore', function(){
-
+    $posts = Post::all();
+    foreach ($posts as $post) {
+        echo $post->id . '<br>';
+    }
 });
 
 //Route::get('/post/{id}', 'PostController@index');
